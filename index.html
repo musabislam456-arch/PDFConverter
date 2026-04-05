@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <meta
+    name="description"
+    content="Musab PDF Converter is a modern all-in-one PDF tools website for file to PDF conversion, PDF editing, OCR picture to text, image editing, merging, splitting, compressing, and document editing."
+  />
+  <meta
+    name="keywords"
+    content="Musab PDF Converter, best PDF converter online, free PDF merger, image to PDF converter, PDF editor online, OCR picture to text tool, easy PDF tools website, fast file converter for PDF, online document editing and PDF conversion"
+  />
+  <meta name="author" content="Musab Bin Umair" />
+  <meta property="og:title" content="Musab PDF Converter" />
+  <meta
+    property="og:description"
+    content="Professional all-in-one PDF converter, PDF editor, OCR tool, image to PDF service, and file editor for desktop and mobile."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Musab+PDF+Converter" />
+  <meta property="og:url" content="http://localhost:3000" />
+  <title>Musab PDF Converter | All-in-One PDF Tools Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-file-pdf"></i>
+        <span>Musab PDF Converter</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#pdf-tools">PDF Tools</a>
+        <a href="#image-tools">Image Tools</a>
+        <a href="#ocr">OCR / Picture to Text</a>
+        <a href="#editor">File Editor</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge">Professional PDF SaaS Style Website</span>
+          <h1>Convert, Edit, Merge, OCR, and Manage PDF Files in One Place</h1>
+          <p>
+            Musab PDF Converter helps users convert any type of file to PDF, merge and split PDFs,
+            extract text from pictures, edit documents, and work with image tools in a simple,
+            secure, and modern interface for both desktop and mobile devices.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#pdf-tools" class="btn btn-primary">Convert to PDF</a>
+            <a href="#pdf-tools" class="btn btn-outline">Merge PDF</a>
+            <a href="#editor" class="btn btn-outline">Edit PDF</a>
+            <a href="#ocr" class="btn btn-outline">Image to Text</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>16+</strong>
+              <span>PDF Services</span>
+            </div>
+            <div class="stat-card">
+              <strong>Fast</strong>
+              <span>Frontend Demo Flow</span>
+            </div>
+            <div class="stat-card">
+              <strong>Mobile</strong>
+              <span>Responsive Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel card">
+          <div class="panel-top">
+            <h2>Upload Your File</h2>
+            <p>Drag and drop files here or choose from your device.</p>
+          </div>
+
+          <div class="upload-box" id="dropZone" tabindex="0" aria-label="Drag and drop upload area">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <h3>Drag & Drop Files Here</h3>
+            <p>Supports PDF, Word, Excel, PowerPoint, images, and text files</p>
+            <input type="file" id="mainFileInput" hidden />
+            <div class="upload-actions">
+              <button class="btn btn-primary" id="selectFileBtn" type="button">Select File</button>
+              <button class="btn btn-outline" id="driveBtn" type="button">Google Drive Import</button>
+            </div>
+            <p class="selected-file" id="selectedFileName">No file selected</p>
+          </div>
+
+          <div class="quick-actions">
+            <button class="tool-chip active" data-action="convert">Fast Convert</button>
+            <button class="tool-chip" data-action="merge">Merge PDF</button>
+            <button class="tool-chip" data-action="edit">Edit PDF</button>
+            <button class="tool-chip" data-action="ocr">OCR Text</button>
+          </div>
+
+          <button class="btn btn-primary btn-full" id="startProcessBtn" type="button">
+            <i class="fa-solid fa-bolt"></i> Start Processing
+          </button>
+
+          <div class="status-box" id="globalStatus" aria-live="polite">
+            Ready to process your file.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section section" id="pdf-tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">PDF Tools</span>
+          <h2>All-in-One PDF Conversion and Editing Services</h2>
+          <p>
+            Choose from professional PDF tools designed for quick access, easy use, and a modern SaaS experience.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card card"><i class="fa-solid fa-file-word"></i><h3>Word to PDF</h3><p>Convert DOC and DOCX files into PDF format.</p><button class="mini-btn tool-action" data-tool="Word to PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-file-excel"></i><h3>Excel to PDF</h3><p>Create PDF files from spreadsheets quickly.</p><button class="mini-btn tool-action" data-tool="Excel to PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-file-powerpoint"></i><h3>PowerPoint to PDF</h3><p>Turn slides into clean downloadable PDFs.</p><button class="mini-btn tool-action" data-tool="PowerPoint to PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-image"></i><h3>JPG to PDF</h3><p>Convert JPG image files into PDF documents.</p><button class="mini-btn tool-action" data-tool="JPG to PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-file-image"></i><h3>PNG to PDF</h3><p>Turn PNG files into shareable PDF format.</p><button class="mini-btn tool-action" data-tool="PNG to PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-font"></i><h3>Text to PDF</h3><p>Convert notes and plain text into PDF files.</p><button class="mini-btn tool-action" data-tool="Text to PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-code"></i><h3>HTML to PDF</h3><p>Export basic HTML content into PDF format.</p><button class="mini-btn tool-action" data-tool="HTML to PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-layer-group"></i><h3>Merge PDF</h3><p>Combine multiple PDFs into one document.</p><button class="mini-btn tool-action" data-tool="Merge PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-scissors"></i><h3>Split PDF</h3><p>Split long PDF files into selected pages.</p><button class="mini-btn tool-action" data-tool="Split PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-compress"></i><h3>Compress PDF</h3><p>Reduce PDF size for sharing and uploads.</p><button class="mini-btn tool-action" data-tool="Compress PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-lock"></i><h3>Protect PDF</h3><p>Add password security to important documents.</p><button class="mini-btn tool-action" data-tool="Protect PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-lock-open"></i><h3>Unlock PDF</h3><p>Remove restrictions from permitted PDF files.</p><button class="mini-btn tool-action" data-tool="Unlock PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-rotate-right"></i><h3>Rotate PDF</h3><p>Fix page orientation with one click.</p><button class="mini-btn tool-action" data-tool="Rotate PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-droplet"></i><h3>Watermark PDF</h3><p>Add brand, name, or mark to your PDF pages.</p><button class="mini-btn tool-action" data-tool="Watermark PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-signature"></i><h3>Sign PDF</h3><p>Insert digital signature style fields quickly.</p><button class="mini-btn tool-action" data-tool="Sign PDF">Use Tool</button></article>
+          <article class="tool-card card"><i class="fa-solid fa-pen-to-square"></i><h3>Edit PDF</h3><p>Edit text, layout, notes, and basic elements.</p><button class="mini-btn tool-action" data-tool="Edit PDF">Use Tool</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="editor-section section" id="editor">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">File Editor</span>
+          <h2>Simple Document Editor Inspired by Office Style Layout</h2>
+          <p>
+            Write, format, and prepare content in a rich text editor area, then save your work as PDF.
+          </p>
+        </div>
+
+        <div class="editor-card card">
+          <div class="editor-toolbar">
+            <button type="button" class="editor-btn format-btn" data-command="bold" aria-label="Bold"><i class="fa-solid fa-bold"></i></button>
+            <button type="button" class="editor-btn format-btn" data-command="italic" aria-label="Italic"><i class="fa-solid fa-italic"></i></button>
+            <button type="button" class="editor-btn format-btn" data-command="underline" aria-label="Underline"><i class="fa-solid fa-underline"></i></button>
+
+            <select id="fontSizeSelector" class="editor-select" aria-label="Select font size">
+              <option value="2">Small</option>
+              <option value="3" selected>Normal</option>
+              <option value="5">Large</option>
+              <option value="7">Extra Large</option>
+            </select>
+
+            <button type="button" class="editor-btn align-btn" data-command="justifyLeft" aria-label="Align left"><i class="fa-solid fa-align-left"></i></button>
+            <button type="button" class="editor-btn align-btn" data-command="justifyCenter" aria-label="Align center"><i class="fa-solid fa-align-center"></i></button>
+            <button type="button" class="editor-btn align-btn" data-command="justifyRight" aria-label="Align right"><i class="fa-solid fa-align-right"></i></button>
+
+            <label class="editor-btn file-label" for="insertImageInput">
+              <i class="fa-solid fa-image"></i> Insert Image
+            </label>
+            <input type="file" id="insertImageInput" accept="image/*" hidden />
+
+            <button type="button" class="editor-btn" id="insertTextBoxBtn">
+              <i class="fa-solid fa-square-plus"></i> Insert Text Box
+            </button>
+            <button type="button" class="editor-btn primary" id="savePdfBtn">
+              <i class="fa-solid fa-file-arrow-down"></i> Save as PDF
+            </button>
+            <button type="button" class="editor-btn danger" id="clearEditorBtn">
+              <i class="fa-solid fa-trash"></i> Clear
+            </button>
+          </div>
+
+          <div
+            id="editorArea"
+            class="editor-area"
+            contenteditable="true"
+            aria-label="Editable document area"
+          >
+            <h3>Welcome to Musab PDF Converter Editor</h3>
+            <p>
+              Start typing here. You can format text, insert images, add a text box style block,
+              and export this content as a PDF.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ocr-section section" id="ocr">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">OCR / Picture to Text</span>
+          <h2>Extract Text from Image Files with OCR</h2>
+          <p>
+            Upload an image, extract text, copy the result, download the text file, or convert extracted text to PDF.
+          </p>
+        </div>
+
+        <div class="ocr-grid">
+          <div class="card ocr-upload-card">
+            <label for="ocrImageInput" class="upload-inline">
+              <i class="fa-solid fa-camera"></i>
+              <span>Upload Image for OCR</span>
+            </label>
+            <input type="file" id="ocrImageInput" accept="image/*" hidden />
+            <p id="ocrFileName" class="small-text">No OCR image selected</p>
+            <button class="btn btn-primary btn-full" id="extractTextBtn" type="button">Extract Text</button>
+            <div class="status-box" id="ocrStatus">OCR is ready.</div>
+          </div>
+
+          <div class="card">
+            <textarea
+              id="ocrResult"
+              class="ocr-textarea"
+              placeholder="Extracted text will appear here..."
+            ></textarea>
+            <div class="textarea-actions">
+              <button class="btn btn-outline" id="copyTextBtn" type="button">Copy Text</button>
+              <button class="btn btn-outline" id="downloadTextBtn" type="button">Download Text</button>
+              <button class="btn btn-primary" id="textToPdfBtn" type="button">Convert Text to PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-tools-section section" id="image-tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Image Tools</span>
+          <h2>Simple Image Editing and Image to PDF Tools</h2>
+          <p>
+            Resize, crop visually, rotate, adjust brightness and contrast, preview your image, and download the result.
+          </p>
+        </div>
+
+        <div class="image-tools-grid">
+          <div class="card image-controls-card">
+            <label for="imageEditorInput" class="upload-inline">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload Image</span>
+            </label>
+            <input type="file" id="imageEditorInput" accept="image/*" hidden />
+
+            <div class="control-group">
+              <label for="resizeWidth">Resize Width</label>
+              <input type="number" id="resizeWidth" min="50" placeholder="Width in px" />
+            </div>
+
+            <div class="control-group">
+              <label for="resizeHeight">Resize Height</label>
+              <input type="number" id="resizeHeight" min="50" placeholder="Height in px" />
+            </div>
+
+            <div class="control-group">
+              <label for="brightnessRange">Brightness</label>
+              <input type="range" id="brightnessRange" min="50" max="150" value="100" />
+            </div>
+
+            <div class="control-group">
+              <label for="contrastRange">Contrast</label>
+              <input type="range" id="contrastRange" min="50" max="150" value="100" />
+            </div>
+
+            <div class="image-tool-actions">
+              <button class="btn btn-outline" type="button" id="rotateLeftBtn">Rotate Left</button>
+              <button class="btn btn-outline" type="button" id="rotateRightBtn">Rotate Right</button>
+              <button class="btn btn-outline" type="button" id="applyResizeBtn">Resize Image</button>
+              <button class="btn btn-outline" type="button" id="cropDemoBtn">Crop Image</button>
+              <button class="btn btn-primary" type="button" id="imageToPdfBtn">Convert Image to PDF</button>
+              <button class="btn btn-primary" type="button" id="downloadImageBtn">Download Edited Image</button>
+            </div>
+
+            <div class="status-box" id="imageStatus">Image editor ready.</div>
+          </div>
+
+          <div class="card image-preview-card">
+            <canvas id="imageCanvas" width="700" height="450" aria-label="Edited image preview"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section section" id="downloads">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Downloads</span>
+          <h2>Processed Files and Download Center</h2>
+          <p>
+            Your latest processed files, status updates, and download actions appear here.
+          </p>
+        </div>
+
+        <div class="card results-card">
+          <div class="loader hidden" id="mainLoader"></div>
+          <div id="resultsList" class="results-list">
+            <div class="result-item">
+              <div>
+                <h3>Ready for new task</h3>
+                <p>No processed file yet. Upload a file and start a tool.</p>
+              </div>
+              <button class="btn btn-outline" type="button" disabled>Download File</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo-section section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Why Choose Us</span>
+          <h2>SEO Friendly Content for Users and Search Visibility</h2>
+        </div>
+
+        <div class="seo-content card">
+          <p>
+            Musab PDF Converter is designed to be one of the best PDF converter online platforms for users who need a simple and professional way to handle documents. Whether someone wants to convert Word files, Excel sheets, PowerPoint presentations, or images into PDF format, this website provides a clean and easy experience that works smoothly on both desktop and mobile devices.
+          </p>
+          <p>
+            Users looking for a free PDF merger or a fast tool to split PDF files can use this website as a reliable starting point. The layout is beginner-friendly, the upload system is clear, and the download buttons are easy to find. This makes it useful for students, office workers, freelancers, and anyone who regularly works with digital documents.
+          </p>
+          <p>
+            The image to PDF converter area and PDF editor online features help users save time while keeping everything in one place. Instead of moving between many websites, visitors can manage image conversion, PDF editing, document organization, and file preparation from a single dashboard interface with modern cards and responsive design.
+          </p>
+          <p>
+            This website also includes an OCR picture to text tool for users who need to extract words from screenshots, scanned papers, and photos. It supports easy text copying, text downloading, and turning extracted content into PDF files. For many people, this makes online document editing and PDF conversion much faster and more practical.
+          </p>
+          <p>
+            If someone is searching for an easy PDF tools website or a fast file converter for PDF tasks, Musab PDF Converter is built to offer a premium but simple experience. It combines PDF tools, image tools, OCR features, and a basic office-style editor in one professional website concept that is easy to upgrade into a real SaaS platform.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy-section section" id="privacy">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Privacy & Trust</span>
+          <h2>Safe, Simple, and User-Friendly File Experience</h2>
+        </div>
+
+        <div class="card privacy-card">
+          <p>
+            Musab PDF Converter is built with user trust in mind. The website focuses on privacy satisfaction, secure uploads, and file safety so users can feel comfortable while using online tools. Uploaded files should be processed with care, temporary files should be removed quickly, and the overall experience should stay simple, fast, and safe. This project is designed to feel trustworthy, easy to use, and practical for users who want online PDF tools without confusion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Contact</span>
+          <h2>Get in Touch</h2>
+          <p>
+            This demo section can be connected later with email, WhatsApp, a contact form, or business support details.
+          </p>
+        </div>
+
+        <div class="card contact-card">
+          <form id="contactForm">
+            <div class="contact-grid">
+              <div class="control-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required />
+              </div>
+              <div class="control-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required />
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p class="small-text" id="contactStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made By Musab Bin Umair</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

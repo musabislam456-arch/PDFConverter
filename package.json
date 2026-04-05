@@ -1,0 +1,29 @@
+{
+  "name": "musab-pdf-converter",
+  "version": "1.0.0",
+  "description": "Professional all-in-one PDF tools website project with OCR, image tools, file editor, and PDF utilities.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "pdf converter",
+    "pdf editor",
+    "ocr",
+    "image to text",
+    "nodejs",
+    "express",
+    "multer",
+    "pdf-lib",
+    "tesseract.js"
+  ],
+  "author": "Musab Bin Umair",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2",
+    "pdf-lib": "^1.17.1",
+    "tesseract.js": "^5.1.1"
+  }
+}
